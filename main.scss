@@ -1,0 +1,162 @@
+
+// color vars
+$blue: #183691;
+$teal: #0086b3;
+$black: #333;
+$purple: #a71d5d;
+$maroon: #a71d5d;
+$green: #63a35c;
+$light-gray: #f7f7f7;
+$dark-gray: #969896;
+
+@font-face{
+  font-family: 'Fira Code';
+  src: url('fonts/eot/FiraCode-Light.eot');
+  src: url('fonts/eot/FiraCode-Light.eot') format('embedded-opentype'),
+       url('fonts/woff2/FiraCode-Light.woff2') format('woff2'),
+       url('fonts/woff/FiraCode-Light.woff') format('woff'),
+       url('fonts/ttf/FiraCode-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Fira Code';
+  src: url('fonts/eot/FiraCode-Regular.eot');
+  src: url('fonts/eot/FiraCode-Regular.eot') format('embedded-opentype'),
+       url('fonts/woff2/FiraCode-Regular.woff2') format('woff2'),
+       url('fonts/woff/FiraCode-Regular.woff') format('woff'),
+       url('fonts/ttf/FiraCode-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Fira Code';
+  src: url('fonts/eot/FiraCode-Medium.eot');
+  src: url('fonts/eot/FiraCode-Medium.eot') format('embedded-opentype'),
+       url('fonts/woff2/FiraCode-Medium.woff2') format('woff2'),
+       url('fonts/woff/FiraCode-Medium.woff') format('woff'),
+       url('fonts/ttf/FiraCode-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Fira Code';
+  src: url('fonts/eot/FiraCode-Bold.eot');
+  src: url('fonts/eot/FiraCode-Bold.eot') format('embedded-opentype'),
+       url('fonts/woff2/FiraCode-Bold.woff2') format('woff2'),
+       url('fonts/woff/FiraCode-Bold.woff') format('woff'),
+       url('fonts/ttf/FiraCode-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// base
+code,
+code[class*='language-'],
+pre[class*='language-'] {
+  color: $black;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  tab-size: 4;
+  hyphens: none;
+  font-family: 'Fira Code', 'Consolas', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important;
+  line-height: 1.4;
+  direction: ltr;
+  cursor: text;
+}
+
+// code blocks
+pre[class*='language-'] {
+  overflow: auto;
+  margin: 1em 0;
+  padding: 1.2em;
+  border-radius: 3px;
+  font-size: 85%;
+}
+
+p code,
+li code,
+table code {
+  margin: 0;
+  border-radius: 3px;
+  padding: 0.2em 0;
+  font-size: 85%;
+
+  &:before,
+  &:after {
+    letter-spacing: -0.2em;
+    content: '\00a0';
+  }
+}
+
+code,
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: transparent;
+}
+
+// inline code
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+}
+
+
+// token colors
+.token {
+
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata {
+    color: $dark-gray;
+  }
+  
+  &.punctuation,
+  &.string,
+  &.atrule,
+  &.attr-value {
+    color: $blue;
+  }
+  
+  &.property,
+  &.tag {
+    color: $green;
+  }
+  
+  &.function,
+  &.boolean,
+  &.number {
+    color: $teal;
+  }
+
+  &.selector,
+  &.attr-name,
+  &.attr-value .punctuation:first-child,
+  &.keyword,
+  &.regex,
+  &.important {
+    color: $maroon;
+  }
+
+
+  &.operator,
+  &.entity,
+  &.url,
+  .language-css &.string {
+    color: $purple;
+  }
+
+  &.entity {
+    cursor: help;
+  }
+
+}
+
+.namespace {
+  opacity: 0.7;
+}

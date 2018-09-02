@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.scss" />
+</head>
+<body>
+  <pre><code class="language-css">p { color: red }</code></pre>
+  <pre><code class="language-js">const a = () => console.log('lalalal'); function foo () { }</code></pre>
+  <pre><code class="language-rust">fn foo () -> String { println!("{}", 1) }</code></pre>
+  <pre><code class="language-js">const resolveLanguageDependencies = language => {
+      const requires = prismComponents.languages[language].require;
+  
+      if (!requires) {
+          return [];
+      }
+  
+      const dependencies = [].concat(requires);
+  
+      return [
+          ...flatMap(dependencies, resolveLanguageDependencies),
+          ...dependencies
+      ];
+  };</code></pre>
+  <script src="main.js"></script>
+</body>
+</html>

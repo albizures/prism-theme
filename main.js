@@ -1,0 +1,6 @@
+require('prismjs/components/prism-core')
+require('prismjs/components/prism-clike')
+require('prismjs/components/prism-markup')
+require('prismjs/components/prism-javascript')
+require('prismjs/components/prism-css')
+require('prismjs/components/prism-rust')
